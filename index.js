@@ -3,7 +3,7 @@ var isRightToolsAdded = false;
 var additionalRigtTools = document.querySelector(".additional-page-tools");
 var additionalRigtToolsToggler = document.querySelector(".page-tools-text");
 var pageHeader = document.querySelector(".page-header__title-wrapper");
-var mobilePageTools = document.querySelector(".right-page-tools-mobile");
+var mobilePageTools = document.querySelectorAll(".page-tools-mobile");
 
 function displayAdittionalRightTools() {
    if (!isRightToolsAdded) {
@@ -20,6 +20,13 @@ function displayAdittionalRightTools() {
 
 function displayMobileEditorTools() {
     if (!isRightToolsAdded) {
-        
+        for (var i = 0; i < mobilePageTools.length; i++) {
+        mobilePageTools[i].style.display = "unset";
+            }
+    } else {
+        for (var i = 0; i < mobilePageTools.length; i++) {
+            mobilePageTools[i].style.display = "none";
+                }
     }
+    isRightToolsAdded = !isRightToolsAdded;
 }
