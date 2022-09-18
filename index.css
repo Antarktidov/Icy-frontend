@@ -35,14 +35,35 @@ html {
   .wiki-navigation a{
     text-decoration: none;
     color: black;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .wiki-navigation {
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto;
   }
   .search {
     margin-top: auto;
     margin-bottom: auto;
+    height: 40px;
+    width: 200px;
+    border-radius: 45px;
+    margin-right: 20px;
+  }
+  .search-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 40px;
+    left: 40px;
+
+  }
+  .search input {
+    border-style: none;
+    border-radius: 45px;
+    background-color: rgb(199, 190, 190);
+    height: 100%;
+    width: 100%;
   }
   .avatar {
     margin-top: auto;
@@ -50,6 +71,7 @@ html {
     width: 40px;
     height: 40px;
     border-radius: 45px;
+    margin-right: 40px;
   }
   /*Баннер страницы*/
   .article-banner {
@@ -85,13 +107,69 @@ html {
     margin-left: 5px;
     color: rgb(45, 128, 156);
   }
+  /*Инструменты редактора*/
+  .right-page-tools {
+    width: 50px;
+    margin-right: 30px;
+    margin-left: auto;
+    margin-top: -10px;
+  }
+  .page-tools-main.page-tools-svg {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 45px;
+  }
+  .page-tools-main.page-tools-img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 45px;
+  }
+  .page-tools-main.page-tools-text {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 45px;
+    font-size: 20px;
+    margin-left: 12px;
+  }
+  .page-tools {
+    margin-bottom: 5px;
+  }
+  /*Разворачиваемые инструменты*/
+  .additional-page-tools {
+    display: none;
+  }
+  .page-tools-additional.page-tools-img {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 45px;
+    margin-left: 12px;
+  }
+  .page-tools-additional.page-tools-svg {
+    width: 30px;
+    height: 30px;
+    /*padding: 10px;*/
+    border: 1px solid black;
+    border-radius: 45px;
+    margin-left: 12px;
+  }
+  .history-icon {
+    padding-right: 2px;
+  }
+  .talk-icon {
+    padding: 5px;
+  }
   /*Заголовок*/
   .page-header__title-wrapper {
     text-align:center;
     font-size: 40px;
     font-weight: bold;
     font-style: inherit;
-    margin-top: 50px;
+    margin-top: -50px;
   }
   /*Материал из вики*/
   .from-wiki {
@@ -106,7 +184,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     font-size: 20px;
-    width: 1000px;
+    max-width: 1000px;
     line-height: 30px;
   }
   /*Основной контент*/
@@ -114,7 +192,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     font-size: 20px;
-    width: 750px;
+    max-width: 750px;
     line-height: 30px;
   }
   /*Загловок второго уровня*/
@@ -128,3 +206,58 @@ html {
     width: 300px;
     height: auto;
   }
+  /*Responsibility*/
+  .right-page-tools-mobile {
+    display:none;
+  }
+  @media (max-width:800px) {
+    .page__main {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  @media (max-width:750px) {
+    .right-page-tools {
+      visibility: hidden;
+    }
+    .right-page-tools-mobile {
+      display:block;
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      border-radius: 45px;
+      margin-left: auto;
+      margin-right: 10px;
+    }
+    .right-page-tools-mobile span {
+      display:block;
+      margin: auto;
+      font-size: 20px;
+      margin-left: 5px;
+      margin-top: 2px;
+    }
+    .page-header__title-wrapper {
+      margin-top: -100px;
+    }
+    .from-wiki {
+      margin-top: 5px;
+    }
+  }
+  @media (max-width:500px) {
+    .page-image {
+      margin-right:auto;
+      margin-left: auto;
+    }
+  }
+  @media (max-width:450px) {
+    .article-banner {
+    content: url(file:///D:/Icy/images/ВаряБаннер.jpg);
+    height: 30vh;
+  }
+  .page-header__title-wrapper {
+    font-size: 25px;
+  }
+  .from-wiki {
+    font-size: 12px;
+  }
+}
