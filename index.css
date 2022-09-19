@@ -28,9 +28,14 @@ html {
   }
   /*Мои стили*/
   /*Верхнее меню*/
-  nav {
+  .desktop-nav {
     display: flex;
     height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: aliceblue;
   }
   .wiki-navigation a{
     text-decoration: none;
@@ -41,6 +46,8 @@ html {
   }
   .wiki-navigation {
     margin: auto;
+    display: flex;
+    justify-content: space-between;
   }
   .search {
     margin-top: auto;
@@ -75,6 +82,7 @@ html {
   }
   /*Баннер страницы*/
   .article-banner {
+    margin-top: 100px;
     content: url(file:///D:/Icy/images/ВаряБаннер.jpg);
     width: 100%;
     height: 40vh;
@@ -277,9 +285,89 @@ html {
   border-radius: 45px;
  /*margin-left: 12px;*/
 }
-.full-page-tools-mobile {
-
-}
-.page-tools-mobile {
+.page-tools-mobile-additional {
   display: none;
+}
+.mobile-nav {
+  display: none;
+}
+/*Мобильная верхняя менюшка*/
+@media (max-width: 1100px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+    flex-direction:column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background-color:aliceblue;
+  }
+  .mobile-nav-middle {
+    display: none;
+  }
+  .mobile-nav-top, .mobile-nav-bottom {
+    display: flex;
+  }
+  .mobile-nav-top img {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .wiki-wordmark .search-container {
+    margin-right: auto;
+  }
+  .mobile-nav-top img:nth-child(2) {
+    height: 30px;
+    width: auto;
+  }
+  .search-container, .avatar {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .top-menu-mobile {
+    margin-left: auto;
+    margin-right: 15px;
+  }
+  .avatar, .top-menu-mobile {
+    margin-left: auto;
+  }
+  .search-icon {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    height: 10px;
+    width: auto;
+  }
+  .search-container {
+    margin-left: 10px;
+  }
+  .search {
+    height: 20px;
+  }
+  .avatar {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    height: 25px;
+    width: auto;
+  }
+  .wiki-navigation {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    background-color: aliceblue;
+  }
+  .mobile-nav-bottom {
+    background-color: aliceblue;
+  }
+  .wiki-navigation a {
+    /*text-transform: lowercase;*/
+    margin-top: 20px;
+  }
 }

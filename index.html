@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-    <nav>
+    <nav class="desktop-nav">
         <img
             class="wiki-wordmark"
             src="images/Site-logo.png"
@@ -31,6 +31,43 @@
             class="avatar"
             src="images/avatar.png"
             alt="Ваш аватар">
+    </nav>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-top">
+            <img
+                class="wiki-wordmark"
+                src="images/Site-logo.png"
+                alt="Логотип вики">
+            <img
+                onClick="ToggleMobileMenu()"
+                class="top-menu-mobile"
+                src="images/menu-cafe.png"
+                alt="Верхнее меню">
+        </div>
+        <div class="mobile-nav-middle">
+            <span class="wiki-navigation">
+                <a href="/">MAIN PAGE</a>
+                <a href="#">CONTENTS</a>
+                <a href="#">FEATURED CONTENTS</a>
+                <a href="#">CURRENT EVENTS</a>
+                <a href="/wiki/Special:Random">RANDOM ARTICLE</a>
+            </span>
+        </div>
+        <div class="mobile-nav-bottom">
+            <div class="search-container">
+                <img
+                    class="search-icon"
+                    src="images/find-icon-11.png"
+                    alt="Лупа">
+                <form action="/wiki/Special:Search" method="get" class="search">
+                    <input name="search" type="search">
+                </form>
+            </div>
+            <img
+                class="avatar"
+                src="images/avatar.png"
+                alt="Ваш аватар">
+            </div>
     </nav>
     <div class="article-banner"></div>
     <div class="page">
@@ -61,32 +98,32 @@
                         </a>
                         <a href="/">
                             <img
-                            class="page-tools-mobile page-tools page-tools-img"
+                            class="page-tools-mobile page-tools page-tools-img page-tools-mobile-additional"
                             src="images/move.png">
                         </a>
                         <a href="/" class="kostyl">
                             <img
-                            class="page-tools-mobile page-tools-img"
+                            class="page-tools-mobile page-tools-img page-tools-mobile-additional"
                             width="30"
                             src="images/history.png">
                         </a>
                         <a href="/">
-                            <svg class="page-tools-mobile page-tools page-tools-svg"
+                            <svg class="page-tools-mobile page-tools page-tools-svg page-tools-mobile-additional"
                             id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 190"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>Монтажная область 16</title><path class="cls-1" d="M98.73,147.42c-3.16,0-45-.35-47.46-.35-6.94,0-9.06-3.43-9.06-8.71v-3.62l65.58,1.18v3.33C107.79,144.34,105.63,147.42,98.73,147.42ZM42.21,118l65.58-1.19v12L42.21,129Zm0-12.71c0-4.75,2.31-8.17,7.92-8.77,0-6.91.08-14.46.09-15.91,0-29.7,49.38-27.16,49.35-.71,0,1.84.05,9.3.11,16.19,6.52.35,8.11,4.73,8.11,9.6v5.24l-65.58-.15ZM88,96.09C88,89.44,88,83,88,82c0-14.31-26.12-15.68-26.14.38,0,.72,0,7.23,0,13.89Z"/>
                             </svg>
                         </a>
                         <a href="/">
-                            <svg class="page-tools-mobile page-tools page-tools-svg"
+                            <svg class="page-tools-mobile page-tools page-tools-svg page-tools-mobile-additional"
                             id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 190"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>Монтажная область 69</title><path class="cls-1" d="M124.05,130.68v8.58L116,146.6l-17.4.25-2.45-6-4.4-3.7L93,122.72l5.58,0,6.79-7.82,15.44,5-.25,8.39Zm-16.88-10.09-4.26,4,3.1,2,6.94-4Zm11.16,12-8.06-3.94L106,131.1l-6-2.55-3.53,7.75,11.5-.17,1.92,4.78,3.56.88,2.27-4.37,3.76-.67ZM44.67,78.8l60.61-.71.22,11.56-59.82-.41Zm35.88-5V69.71L69,69.57v4.15l-8.23,0s-.19-3.06-.24-5.54c-.11-4.54,2.62-6.65,7.79-6.82,2.45-.09,9.77.08,12.84.08,5.57,0,7.76,2.2,7.79,5.85,0,2.53-.19,6.57-.19,6.57Zm21,38.44-8.85,6c.33-5.68.62-10.84.76-13.1.34-5.88-6.87-5.53-6.85-.18,0,2.84.11,24.49.14,32l.35,0-.23,2.85,5.43,7-40.8.73L49.69,94.33l52.54,0ZM59,105.38c0,3.21.73,27.38.91,33.1l5.65-.32c.07-5.28.4-28.49.4-33.06C65.91,99.51,59,99.42,59,105.38Zm14-.07c.33,3.06.65,25.48.74,32.38l5.83-.33c.1-7.28.39-27.52.39-32.33C80,99.14,72.44,100,73,105.31Z"/>
                             </svg>
                         </a>
-                        <a href="/" class="kostyl">
+                        <a href="/">
                             <img
-                            class="page-tools-mobile page-tools-img"
+                            class="page-tools-mobile page-tools-img page-tools-mobile-additional"
                             src="images/talk.png">
                         </a>
                         <a href="/">
-                            <svg class="page-tools-mobile page-tools page-tools-svg"
+                            <svg class="page-tools-mobile page-tools page-tools-svg page-tools-mobile-additional"
                             id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 190"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>Монтажная область 32</title><path class="cls-1" d="M119.63,102.87A107.16,107.16,0,0,1,129.83,114a76.73,76.73,0,0,1-35.5,20.87l-5.28-9.66c8.58-8.37,8.71-24,.21-32.63A48.51,48.51,0,0,0,69.82,90l-4-7.33a50.4,50.4,0,0,1,5.8-.49l.19-18.07h7.89l-.61,18.4A59.35,59.35,0,0,1,93.46,86l8.62-17.9,6.89,3-8,18.19a79.1,79.1,0,0,1,12.61,8.22l10.54-13.66,6.68,5.36Zm-17.88-4.44c2.53,9.72.58,20.74-5.81,28.36a102,102,0,0,0,24-13.3A86.23,86.23,0,0,0,101.75,98.43Zm-28-3.11c12.83,0,16.42,14.05,11,22l-12-22C73.08,95.35,73.42,95.32,73.77,95.32Zm18.34,58.52L74.88,122.67c-.27,0-.53,0-.81,0a15.64,15.64,0,0,1-6.79-1.43l9,16.06-7,.3L46.48,99.23A51.73,51.73,0,0,0,42.16,103l19.32,34.36-7,.3L37.27,108.33a66.77,66.77,0,0,0-4.28,6l.11.14H33L45,133.58c-10.24-3.38-18.36-8.5-22.61-14.2C29,102.71,40.56,91.11,54.44,85.69L44.31,67.37,50.63,64l47.05,88ZM58.27,92.61a44.46,44.46,0,0,0-5.63,2.58L60,108.33a14.39,14.39,0,0,1,2.68-7.69Z"/>
                             </svg>
                         </a>
