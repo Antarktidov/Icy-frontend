@@ -80,6 +80,10 @@ html {
     border-radius: 45px;
     margin-right: 40px;
   }
+  a .wiki-wordmark {
+    height: 100%;
+    width: auto;
+  }
   /*Баннер страницы*/
   .article-banner {
     margin-top: 100px;
@@ -108,12 +112,25 @@ html {
     margin-left: auto;
     margin-right: auto;
     margin-top: -40px;
+    flex-direction: column;
+  }
+  .one-language {
+    display: flex;
+    margin: 4px;
+  }
+  .interwikis {
+    border: 1px solid gray;
+    border-radius: 3px;
+    visibility: hidden;
   }
   .interwiki-text {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 5px;
     color: rgb(45, 128, 156);
+  }
+  .lang-link {
+    text-decoration: none;
   }
   /*Инструменты редактора*/
   .right-page-tools {
@@ -225,6 +242,12 @@ html {
       margin-right: 10px;
     }
   }
+  @media (min-width:740px) {
+    .page__main {
+      margin-left: 80px;
+      margin-right: 80px;
+    }
+  }
   @media (max-width:750px) {
     .right-page-tools {
       visibility: hidden;
@@ -233,8 +256,11 @@ html {
       display:flex;
       flex-direction: row;
       visibility: unset;
-      margin-top: 50px;
       justify-content: center;
+    }
+    .right-page-tools-mobile a {
+      position: relative;
+      top: 12px;
     }
     .mobile-editor-tools-button {
       /*margin: auto;*/
@@ -284,6 +310,10 @@ html {
   border: 1px solid black;
   border-radius: 45px;
  /*margin-left: 12px;*/
+}
+.page-tools-mobile.page-tools-img {
+  position: relative;
+  bottom: 5px;
 }
 .page-tools-mobile-additional {
   display: none;
