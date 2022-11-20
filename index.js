@@ -3,6 +3,7 @@ var isRightToolsAdded = false;
 var isMobileMenyHidden = true;
 var isInterwikiVisible = false;
 var isUserProfileVisible = false;
+var isWhiteTheme = true;
 var additionalRigtTools = document.querySelector(".additional-page-tools");
 var additionalRigtToolsToggler = document.querySelector(".page-tools-text");
 var pageHeader = document.querySelector(".page-header__title-wrapper");
@@ -15,6 +16,9 @@ var userProfileMeny  = document.querySelector(".user-profile-meny");
 var userProfileMenyMobile  = document.querySelector(".user-profile-meny-mobile");
 var mobileNavBottomSearch = document.querySelector(".mobile-nav-bottom .search-container");
 var mobileNavBottomAvatar = document.querySelector(".mobile-nav-bottom div.avatar");
+var moon = document.querySelector(".moon");
+var sun = document.querySelector(".sun");
+var mobileThemeToggler = document.querySelector(".mobile-theme-toggler");
 
 //дополнительные инструменты редактора
 function displayAdittionalRightTools() {
@@ -89,4 +93,21 @@ function showUserPfofileMenuMobile() {
         userProfileMenyMobile.style.visibility = "hidden";
     }
     isUserProfileVisible = !isUserProfileVisible;
+}
+//Переключатель тем
+function toggleTheme() {
+    if (isWhiteTheme) {
+        document.body.classList.remove("theme-icy-light");
+        document.body.classList.add("theme-icy-dark");
+        mobileThemeToggler.innerText = "LIGHT THEME";
+        moon.style.display = "none";
+        sun.style.display = "unset";
+    } else {
+        document.body.classList.remove("theme-icy-dark");
+        document.body.classList.add("theme-icy-light");
+        mobileThemeToggler.innerText = "DARK THEME";
+        sun.style.display = "none";
+        moon.style.display = "unset";
+    }
+    isWhiteTheme = !isWhiteTheme;
 }
