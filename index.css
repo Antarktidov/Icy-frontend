@@ -1,3 +1,7 @@
+/*Объявляем переменные*/
+:root {
+  --dark-nav-colour: #101111;
+}
 /*Сбрасываем стандартные стили*/
 html {
     box-sizing: border-box;
@@ -35,14 +39,24 @@ html {
     top: 0;
     left: 0;
     right: 0;
+  }
+  .theme-icy-light .desktop-nav {
     background-color: aliceblue;
+  }
+  .theme-icy-dark .desktop-nav {
+    background-color: var(--dark-nav-colour);
   }
   .wiki-navigation a{
     text-decoration: none;
-    color: black;
     font-weight: 500;
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .theme-icy-light .wiki-navigation a {
+    color: black;
+  }
+  .theme-icy-dark .wiki-navigation a {
+    color: white;
   }
   .wiki-navigation {
     margin: auto;
@@ -81,7 +95,6 @@ html {
     margin-right: 40px;
   }
   .user-profile-meny {
-    background-color: aliceblue;
     width: 100px;
     position: relative;
     right: 25px;
@@ -89,8 +102,10 @@ html {
     border-radius: 3px;
     visibility: hidden;
   }
-  .user-profile-meny-mobile {
+  .theme-icy-light .user-profile-meny {
     background-color: aliceblue;
+  }
+  .user-profile-meny-mobile {
     width: 100px;
     position: relative;
     left: 15px;
@@ -99,6 +114,12 @@ html {
     border-radius: 3px;
     visibility: hidden;
   }
+  .theme-icy-light .user-profile-meny-mobile {
+    background-color: aliceblue;
+  }
+  .theme-icy-dark .user-profile-meny-mobile {
+    background-color: #2b2c2c;
+  }
   .user-profile-meny .user-profile-meny-link {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -106,6 +127,10 @@ html {
   }
   .user-profile-meny .user-profile-meny-link a,
   .user-profile-meny-mobile .user-profile-meny-link a {
+    text-decoration: none;
+  }
+  .theme-icy-light .user-profile-meny .user-profile-meny-link a,
+  .theme-icy-light .user-profile-meny-mobile .user-profile-meny-link a {
     text-decoration: none;
     color: black;
   }
@@ -156,7 +181,12 @@ html {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 5px;
+  }
+  .theme-icy-light .interwiki-text{
     color: rgb(45, 128, 156);
+  }
+  .theme-icy-dark .interwiki-text{
+    color: rgb(28, 166, 212);
   }
   .lang-link {
     text-decoration: none;
@@ -172,23 +202,38 @@ html {
   .page-tools-main.page-tools-svg {
     width: 50px;
     height: 50px;
-    border: 1px solid black;
     border-radius: 45px;
+  }
+  .theme-icy-light .page-tools-main.page-tools-svg {
+    border: 1px solid black;
+  }
+  .theme-icy-dark .page-tools-main.page-tools-svg {
+    border: 1px solid white;
   }
   .page-tools-main.page-tools-img {
     width: 50px;
     height: 50px;
     padding: 10px;
-    border: 1px solid black;
     border-radius: 45px;
+  }
+  .theme-icy-light .page-tools-main.page-tools-img {
+    border: 1px solid black;
+  }
+  .theme-icy-dark .page-tools-main.page-tools-img {
+    border: 1px solid white;
   }
   .page-tools-main.page-tools-text {
     width: 30px;
     height: 30px;
-    border: 1px solid black;
     border-radius: 45px;
     font-size: 20px;
     margin-left: 12px;
+  }
+  .theme-icy-light .page-tools-main.page-tools-text {
+    border: 1px solid black;
+  }
+  .theme-icy-dark .page-tools-main.page-tools-text {
+    border: 1px solid white;
   }
   .page-tools {
     margin-bottom: 5px;
@@ -200,17 +245,27 @@ html {
   .page-tools-additional.page-tools-img {
     width: 30px;
     height: 30px;
-    border: 1px solid black;
     border-radius: 45px;
     margin-left: 12px;
+  }
+  .theme-icy-light .page-tools-additional.page-tools-img {
+    border: 1px solid black;
+  }
+  .theme-icy-dark .page-tools-additional.page-tools-img {
+    border: 1px solid white;
   }
   .page-tools-additional.page-tools-svg {
     width: 30px;
     height: 30px;
     /*padding: 10px;*/
-    border: 1px solid black;
     border-radius: 45px;
     margin-left: 12px;
+  }
+  .theme-icy-light .page-tools-additional.page-tools-svg {
+    border: 1px solid black;
+  }
+  .theme-icy-dark .page-tools-additional.page-tools-svg {
+    border: 1px solid white;
   }
   .history-icon {
     padding-right: 2px;
@@ -296,9 +351,14 @@ html {
       font-size: 20px;
       /*margin-left: 5px;
       margin-top: 2px;*/
-      border: 1px solid black;
       border-radius: 45px;
       width: 30px;
+    }
+    .theme-icy-light .mobile-editor-tools-button {
+      border: 1px solid black;
+    }
+    .theme-icy-dark .mobile-editor-tools-button {
+      border: 1px solid white;
     }
     .page-header__title-wrapper {
       margin-top: -100px;
@@ -329,8 +389,10 @@ html {
 .page-tools-mobile.page-tools-img {
   width: 30px !important;
   height: 30px;
-  border: 1px solid black;
   border-radius: 45px;
+}
+.theme-icy-light .page-tools-mobile.page-tools-img {
+  border: 1px solid black;
 }
 .page-tools-mobile.page-tools-svg {
   width: 30px;
@@ -363,7 +425,12 @@ html {
     left: 0;
     right: 0;
     height: 120px;
+  }
+  .theme-icy-light .mobile-nav {
     background-color:aliceblue;
+  }
+  .theme-icy-dark .mobile-nav {
+    background-color: var(--dark-nav-colour);
   }
   .mobile-nav-middle {
     display: none;
@@ -423,13 +490,20 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: unset;
+  }
+  .theme-icy-light .wiki-navigation {
     background-color: aliceblue;
   }
-  .mobile-nav-bottom {
-    background-color: aliceblue;
+  .theme-icy-dark .mobile-nav-bottom {
+    background-color: var(--dark-nav-colour);
   }
   .wiki-navigation a {
     /*text-transform: lowercase;*/
     margin-top: 20px;
   }
+}
+/*Основные стили для тёмной темы*/
+body.theme-icy-dark {
+  background-color: black;
+  color: white
 }
