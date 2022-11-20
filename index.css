@@ -80,6 +80,35 @@ html {
     border-radius: 45px;
     margin-right: 40px;
   }
+  .user-profile-meny {
+    background-color: aliceblue;
+    width: 100px;
+    position: relative;
+    right: 25px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    visibility: hidden;
+  }
+  .user-profile-meny-mobile {
+    background-color: aliceblue;
+    width: 100px;
+    position: relative;
+    left: 15px;
+    top: 15px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    visibility: hidden;
+  }
+  .user-profile-meny .user-profile-meny-link {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding: 5px;
+  }
+  .user-profile-meny .user-profile-meny-link a,
+  .user-profile-meny-mobile .user-profile-meny-link a {
+    text-decoration: none;
+    color: black;
+  }
   a .wiki-wordmark {
     height: 100%;
     width: auto;
@@ -365,6 +394,9 @@ html {
   }
   .avatar, .top-menu-mobile {
     margin-left: auto;
+  }
+  .avatar {
+    margin-bottom: 18px;
   }
   .search-icon {
     position: relative;

@@ -30,10 +30,33 @@
         <form action="/wiki/Special:Search" method="get" class="search">
             <input name="search" type="search">
         </form>
-        <img
-            class="avatar"
-            src="images/avatar.png"
-            alt="Ваш аватар">
+        <div class="avatar">
+            <img
+                class="avatar"
+                src="images/avatar.png"
+                alt="Ваш аватар"
+                onClick="showUserPfofileMenu()">
+            <div class="user-profile-meny">
+                <div class="user-profile-meny-link">
+                    <a href="#">Моя страница</a>
+                </div>
+                <div class="user-profile-meny-link">
+                    <a href="#">Обсуждение</a>
+                </div>
+                <div class="user-profile-meny-link">
+                    <a href="#">Вклад</a>
+                </div>
+                <div class="user-profile-meny-link">
+                    <a href="#">Настройки</a>
+                </div>
+                <div class="user-profile-meny-link">
+                    <a href="#">Черновик</a>
+                </div>
+                <div class="user-profile-meny-link">
+                    <a href="#">Выйти</a>
+                </div>
+            </div>
+        </div>
     </nav>
     <nav class="mobile-nav">
         <div class="mobile-nav-top">
@@ -66,11 +89,34 @@
                     <input name="search" type="search">
                 </form>
             </div>
-            <img
-                class="avatar"
-                src="images/avatar.png"
-                alt="Ваш аватар">
-            </div>
+            <div class="avatar">
+                <img
+                    class="avatar"
+                    src="images/avatar.png"
+                    alt="Ваш аватар"
+                    onClick="showUserPfofileMenuMobile()">
+                    <div class="user-profile-meny-mobile">
+                        <div class="user-profile-meny-link">
+                            <a href="#">Моя страница</a>
+                        </div>
+                        <div class="user-profile-meny-link">
+                            <a href="#">Обсуждение</a>
+                        </div>
+                        <div class="user-profile-meny-link">
+                            <a href="#">Вклад</a>
+                        </div>
+                        <div class="user-profile-meny-link">
+                            <a href="#">Настройки</a>
+                        </div>
+                        <div class="user-profile-meny-link">
+                            <a href="#">Черновик</a>
+                        </div>
+                        <div class="user-profile-meny-link">
+                            <a href="#">Выйти</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
     </nav>
     <div class="article-banner"></div>
     <div class="page">
