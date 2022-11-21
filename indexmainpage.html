@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Библиотека Лосяша</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body class="theme-icy-light">
+    <nav class="desktop-nav">
+        <a href="/">
+            <img
+                class="wiki-wordmark"
+                src="images/Site-logo.webp"
+                alt="Логотип вики"
+                title="Заглавная страница">
+            </a>
+        <span class="wiki-navigation">
+            <span class="current-topnav-link-span">
+                <a class="current-topnav-link" href="/">MAIN PAGE</a>
+            </span>
+            <a href="#">CONTENTS</a>
+            <a href="#">FEATURED CONTENTS</a>
+            <a href="#">CURRENT EVENTS</a>
+            <a href="/wiki/Special:Random">RANDOM ARTICLE</a>
+        </span>
+        <svg onClick="toggleTheme()" class="theme-toggler moon" id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 190"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>Монтажная область 7</title><path class="cls-1" d="M43.46,120.25C35.37,90,58.69,70.84,81.77,71c-32.87,24.71-2.49,74.59,33.12,59.49C99.32,155.49,53.61,158.11,43.46,120.25Z"/></svg>
+        <svg onClick="toggleTheme()" class="theme-toggler sun" id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 190"><defs><style>.cls-1{fill-rule:evenodd;}</style></defs><title>Монтажная область 6</title><path class="cls-1" d="M108.09,98.53l16.9-2,.68,7.38L108.84,105ZM98.44,80.76l9.34-8.85,5.13,5.75L102.37,85.4ZM80.13,72.18l3.56-16.76,7,1.78L86,73.84ZM75.6,135.9c-43,.18-40.06-57.69-2.88-57.85C110.62,77.88,111.83,135.74,75.6,135.9ZM72.82,85.5C44,85.62,42.29,129.14,75,129,102.58,128.88,102.18,85.37,72.82,85.5ZM53.15,62l7.59-2.25L64.81,71.4l-5.75,1.94ZM28.88,78.8,32.62,72,46.67,82.12l-2.81,5.5Zm8.7,31-13,1-.2-8.1,12.7,1Zm10.08,21.54L34.84,143.46,30,136.8,43.8,126.64Zm21.64,12.6L68.6,157l-8.72-.92L63.56,143Zm32.06,8.3-7.45,3.57-7.65-15.24,6.5-2.86Zm17.16-24.65-3.44,6.69-12.35-7.93,3-5.31Z"/></svg>
+        <img
+            class="search-icon"
+            src="images/find-icon-11.png"
+            alt="Лупа">
+        <form action="/wiki/Special:Search" method="get" class="search">
+            <input name="search" type="search">
+        </form>
+        <div class="avatar">
+            <img
+                class="avatar"
+                src="images/avatar.png"
+                alt="Ваш аватар"
+                onClick="showUserPfofileMenu()">
+            <div class="user-profile-meny">
+                <div class="user-profile-meny-link">
+                    <a href="#">Моя страница</a>
+                </div>
+                <div class="user-profile-meny-link">
+                    <a href="#">Обсуждение</a>
+                </div>
+                <div class="user-profile-meny-link">
+                    <a href="#">Вклад</a>
+                </div>
+                <div class="user-profile-meny-link">
+                    <a href="#">Настройки</a>
+                </div>
+                <div class="user-profile-meny-link">
+                    <a href="#">Черновик</a>
+                </div>
+                <div class="user-profile-meny-link">
+                    <a href="#">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-top">
+            <img
+                class="wiki-wordmark"
+                src="images/Site-logo.webp"
+                alt="Логотип вики">
+            <img
+                onClick="ToggleMobileMenu()"
+                class="top-menu-mobile"
+                src="images/menu-cafe.png"
+                alt="Верхнее меню">
+        </div>
+        <div class="mobile-nav-middle">
+            <span class="wiki-navigation">
+                <a href="/">MAIN PAGE</a>
+                <a href="#">CONTENTS</a>
+                <a href="#">FEATURED CONTENTS</a>
+                <a href="#">CURRENT EVENTS</a>
+                <a href="/wiki/Special:Random">RANDOM ARTICLE</a>
+                <a onClick="toggleTheme()" class="mobile-theme-toggler" href="#">DARK THEME</a>
+            </span>
+        </div>
+        <div class="mobile-nav-bottom">
+            <div class="search-container">
+                <img
+                    class="search-icon"
+                    src="images/find-icon-11.png"
+                    alt="Лупа">
+                <form action="/wiki/Special:Search" method="get" class="search">
+                    <input name="search" type="search">
+                </form>
+            </div>
+            <div class="avatar">
+                <img
+                    class="avatar"
+                    src="images/avatar.png"
+                    alt="Ваш аватар"
+                    onClick="showUserPfofileMenuMobile()">
+                    <div class="user-profile-meny-mobile">
+                        <div class="user-profile-meny-link">
+                            <a href="#">Моя страница</a>
+                        </div>
+                        <div class="user-profile-meny-link">
+                            <a href="#">Обсуждение</a>
+                        </div>
+                        <div class="user-profile-meny-link">
+                            <a href="#">Вклад</a>
+                        </div>
+                        <div class="user-profile-meny-link">
+                            <a href="#">Настройки</a>
+                        </div>
+                        <div class="user-profile-meny-link">
+                            <a href="#">Черновик</a>
+                        </div>
+                        <div class="user-profile-meny-link">
+                            <a href="#">Выйти</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </nav>
+    <div class="page">
+             <div class="mainpage-slider"></div>
+             <div class="mainpage-slider-txt">
+                <div class="mainpage-slider-top">
+                    <div class="mainpage-slider-left">21.11.2022</div>
+                    <div class="mainpage-slider-right"></div>
+                </div>
+                <div class="mainpage-center">
+                    <h2 class="mainpage-h2">Today's feature article</h2>
+                    <h1 class="mainpage-h1">Скамейка</h1>
+                    <div class="maipage-preamble">Крош — один из главных персонажей мультипликационной франшизы «Смешарики», весёлый и энергичный кролик мужского пола, живущий в Ромашковой Долине вместе с другими Смешариками.</div>
+                </div>
+            </div>
+             <div class="mainpage-main"></div>
+             <div class="mainpage-left-nav"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
