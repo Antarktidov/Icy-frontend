@@ -544,8 +544,51 @@ body.theme-icy-dark {
   object-fit: cover;
   z-index: 0;
 }
-.maipage-txt {
-  position:center;
-  top: 0;
-  bottom: 0;
+.mainpage-slider-top {
+  position: absolute;
+  top: 125px;
+  width: 43vw;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+.mainpage-slider-left {
+  margin-left: 10px;
+}
+.mainpage-center {
+  position:absolute;
+  top: 43vh;
+  width: 45vw;
+  text-align: center;
+  color: black;
+}
+.mainpage-h2 {
+  font-style: italic;
+}
+.mainpage-h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.maipage-preamble {
+  font-style: italic;
+  backdrop-filter: blur(5px);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.mainpage-slider-bottom {
+  position: absolute;
+  top: 95vh;
+  display: flex;
+}
+.recently-feeatured {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: black;
+}
+.recently-feeatured-links a {
+  color: black;
+  margin-right: 20px;
+}
+.recently-feeatured-links {
+  width: 35vw;
 }
