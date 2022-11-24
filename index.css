@@ -1,6 +1,7 @@
 /*Объявляем переменные*/
 :root {
   --dark-nav-colour: #101111;
+  --light-link-color: rgb(45, 128, 156);
 }
 /*Сбрасываем стандартные стили*/
 html {
@@ -207,7 +208,7 @@ html {
     margin-left: 5px;
   }
   .theme-icy-light .interwiki-text{
-    color: rgb(45, 128, 156);
+    color: var(--light-link-color);
   }
   .theme-icy-dark .interwiki-text{
     color: rgb(28, 166, 212);
@@ -603,7 +604,6 @@ body.theme-icy-dark {
 }
 .news {
   display: flex;
-  width: 55vw;
 }
 .news-left-img-wrapper {
   content: url(https://static.wikia.nocookie.net/d9a201a4-6f78-41c0-b304-d1d974b74137/);
@@ -626,9 +626,127 @@ body.theme-icy-dark {
   margin-bottom: 30px;
 }
 /*Правая часть новостей*/
+.news-right {
+  margin-left: 20px;
+  margin-right: 30px;
+  margin-top: 30px;
+}
 .h2-news-container {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 .h2-right {
   font-size: 30px;
+}
+.right-link {
+  display: block;
+  color: var(--light-link-color);
+  text-decoration: none;
+  margin-top: 10px;
+  margin-right: -10px;
+}
+.news-p {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+/*Даты посередине*/
+.dates-line {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.dates-linik {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  color: var(--light-link-color);
+  text-decoration: none;
+}
+
+.mainpage-left-nav {
+  display: flex;
+}
+.on-this-day-list {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.on-this-day-container {
+  display: flex;
+}
+.h2-on-this-day {
+  margin-bottom: 30px;
+}
+.on-this-day-p {
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.did-you-cnow-h2-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.did-you-know-p {
+  font-style: italic;
+  font-size: 20px;
+}
+.mainpage-right-nav {
+  margin-left: 20px;
+}
+.featured-pictire-bottom {
+  display: flex;
+}
+.featured-picture-img-wrapper, 
+.featured-picture-img {
+  width: 100px;
+  height: 100px;
+}
+.featured-picture-img-wrapper {
+  margin-bottom: 10px;
+}
+.featured-pictire-p {
+  margin-left: 20px;
+}
+.h2-featured-pictire {
+  margin-bottom: 30px;
+}
+.photograph-photorgaph {
+  color: gray;
+}
+/*Правая колонка*/
+.right-colomn {
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+}
+.right-colomns-portals,
+.sister-projects {
+  display: grid;
+}
+.right-colomns-portals {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.portal-link {
+  color: black;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.sister-projects-link {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.right-colomn-bottom {
+  margin-left: 20px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
