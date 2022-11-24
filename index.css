@@ -2,6 +2,8 @@
 :root {
   --dark-nav-colour: #101111;
   --light-link-color: rgb(45, 128, 156);
+  --border-right: #d8d8d8;
+  --f5-gray: #f5f5f5;
 }
 /*Сбрасываем стандартные стили*/
 html {
@@ -40,6 +42,7 @@ html {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 50;
   }
   .theme-icy-light .desktop-nav {
     background-color: aliceblue;
@@ -544,9 +547,10 @@ body.theme-icy-dark {
   height: 100vh;
   object-fit: cover;
   z-index: 0;
+  position: fixed;
 }
 .mainpage-slider-top {
-  position: absolute;
+  position: fixed;
   top: 125px;
   width: 43vw;
   display: flex;
@@ -557,7 +561,7 @@ body.theme-icy-dark {
   margin-left: 10px;
 }
 .mainpage-center {
-  position:absolute;
+  position:fixed;
   top: 43vh;
   width: 45vw;
   text-align: center;
@@ -577,7 +581,7 @@ body.theme-icy-dark {
   margin-right: 100px;
 }
 .mainpage-slider-bottom {
-  position: absolute;
+  position: fixed;
   top: 95vh;
   display: flex;
 }
@@ -625,6 +629,9 @@ body.theme-icy-dark {
   margin-top: -10px;
   margin-bottom: 30px;
 }
+.news-left {
+  border-right: 1px solid var(--border-right);
+}
 /*Правая часть новостей*/
 .news-right {
   margin-left: 20px;
@@ -644,7 +651,6 @@ body.theme-icy-dark {
   color: var(--light-link-color);
   text-decoration: none;
   margin-top: 10px;
-  margin-right: -10px;
 }
 .news-p {
   margin-bottom: 20px;
@@ -654,9 +660,10 @@ body.theme-icy-dark {
 .dates-line {
   display: flex;
   justify-content: center;
-  background-color: #f5f5f5;
+  background-color: var(--f5-gray);
   padding-top: 10px;
   padding-bottom: 10px;
+  color: gray;
 }
 .dates-linik {
   margin-left: auto;
@@ -665,7 +672,7 @@ body.theme-icy-dark {
   color: var(--light-link-color);
   text-decoration: none;
 }
-
+/*Внизу*/
 .mainpage-left-nav {
   display: flex;
 }
@@ -693,9 +700,11 @@ body.theme-icy-dark {
 .did-you-know-p {
   font-style: italic;
   font-size: 20px;
+  margin-bottom: 30px;
 }
 .mainpage-right-nav {
   margin-left: 20px;
+  margin-right: 20px;
 }
 .featured-pictire-bottom {
   display: flex;
@@ -710,12 +719,17 @@ body.theme-icy-dark {
 }
 .featured-pictire-p {
   margin-left: 20px;
+  margin-right: 20px;
 }
 .h2-featured-pictire {
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 .photograph-photorgaph {
   color: gray;
+}
+.did-you-know-nav {
+  margin-right: 20px;
 }
 /*Правая колонка*/
 .right-colomn {
@@ -734,19 +748,37 @@ body.theme-icy-dark {
 .right-colomns-portals {
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: var(--f5-gray);
 }
 .portal-link {
   color: black;
   text-decoration: none;
   margin-bottom: 10px;
+  text-align: center;
 }
 .sister-projects-link {
   margin-top: 30px;
   margin-left: 20px;
 }
+.sister-projects {
+  background-color: #ececec;
+}
 .right-colomn-bottom {
-  margin-left: 20px;
+  background-color: var(--f5-gray);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.right-colomn-bottom-buttons {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
+  padding: auto;
+}
+/*border-ы*/
+.bottom-line {
+  border-right: 1px solid var(--border-right);
+}
+.bottom-left-middle-border {
+  border-bottom: 1px solid var(--border-right);
+  margin-left: -20px;
 }
