@@ -551,7 +551,7 @@ body.theme-icy-dark {
 }
 .mainpage-slider-top {
   position: fixed;
-  top: 125px;
+  top: 115px;
   width: 43vw;
   display: flex;
   justify-content: space-between;
@@ -559,6 +559,8 @@ body.theme-icy-dark {
 }
 .mainpage-slider-left {
   margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .mainpage-center {
   position:fixed;
@@ -597,17 +599,23 @@ body.theme-icy-dark {
 .recently-feeatured-links {
   width: 35vw;
 }
-/*Левая часть заглавной*/
-/*Левая часть новостей*/
+.apps-icon-button,
+.random-icon-button {
+  width: 28px;
+  height: 28px;
+}
+/*Правая часть заглавной*/
 .mainpage-main {
-  position:absolute;
+  position: fixed;
   left: 45vw;
   right: 100px;
   top: 100px;
   bottom: 0;
 }
+/*Левая часть новостей*/
 .news {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .news-left-img-wrapper {
   content: url(https://static.wikia.nocookie.net/d9a201a4-6f78-41c0-b304-d1d974b74137/);
@@ -628,6 +636,10 @@ body.theme-icy-dark {
   margin-right: 25px;
   margin-top: -10px;
   margin-bottom: 30px;
+
+  max-height: 15vh;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .news-left {
   border-right: 1px solid var(--border-right);
@@ -650,11 +662,14 @@ body.theme-icy-dark {
   display: block;
   color: var(--light-link-color);
   text-decoration: none;
-  margin-top: 10px;
+  margin-top: 10px; 
 }
 .news-p {
   margin-bottom: 20px;
   margin-top: 20px;
+  max-height: 10vh;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 /*Даты посередине*/
 .dates-line {
@@ -674,26 +689,33 @@ body.theme-icy-dark {
 }
 /*Внизу*/
 .mainpage-left-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .on-this-day-list {
-  margin-top: 30px;
   margin-left: 20px;
-  margin-right: 20px;
+  border-right: 1px solid var(--border-right);
 }
 .on-this-day-container {
   display: flex;
+  /*border-right: 1px solid var(--border-right);*/
 }
 .h2-on-this-day {
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 .on-this-day-p {
   margin-left: 30px;
   margin-bottom: 30px;
+
+  max-height: 7.25vh;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .did-you-cnow-h2-container {
   margin-top: 30px;
   margin-bottom: 30px;
+  margin-right: 20px;
   display: flex;
   justify-content: space-between;
 }
@@ -702,9 +724,23 @@ body.theme-icy-dark {
   font-size: 20px;
   margin-bottom: 30px;
 }
+.reload-did-you-know-button {
+  width: 40px;
+  height: 40px;
+}
+.reload-did-you-know-icon {
+  color: var(--f5-gray);
+  filter: INVERT(50%);
+}
 .mainpage-right-nav {
   margin-left: 20px;
   margin-right: 20px;
+}
+.featured-pucture-nav {
+  overflow-y: auto;
+}
+.featured-pucture-sub-nav {
+  height: 300px;
 }
 .featured-pictire-bottom {
   display: flex;
@@ -773,6 +809,11 @@ body.theme-icy-dark {
 .right-colomn-bottom-buttons {
   display: block;
   padding: auto;
+}
+.bottom-right-dots {
+  width: 8px;
+  height: 8px;
+  filter: invert(50%);
 }
 /*border-ы*/
 .bottom-line {
