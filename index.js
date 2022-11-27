@@ -19,6 +19,31 @@ var mobileNavBottomAvatar = document.querySelector(".mobile-nav-bottom div.avata
 var moon = document.querySelector(".moon");
 var sun = document.querySelector(".sun");
 var mobileThemeToggler = document.querySelector(".mobile-theme-toggler");
+var didYouKnowP = document.querySelector('.did-you-know-p');
+var dates = document.querySelectorAll('.dates-linik');
+
+var didYouKnowArr = ['слово «Смешарики» в сериале произносится только в серии «Бортовой дневник 2»?',
+                    'Бараш в эпизоде «Принцесса в поиске» при общении с Нюшей посредством компьютера притворялся Чёрным Ловеласом?',
+                    'название серии «Адаптиция» возникло в результате опечатки одного из участников форума prodisney.ru?',
+                    'ПИН-код от банковской карточки Пина — 9757?',
+                    'в серии «Скамейка» Бараш в первый и последний раз писал стихи нормальным почерком?',
+                    'часть эпизода «Футбол» была переснята в формате 3D?'];
+
+var newTitles = ['Библиотеке Лосяша — 12 лет!', 'Четырёхлетие сервера Библиотеки Лосяша в Discord’e', 'Новый администратор',
+                'Обновление доски почёта', 'Обновление инфобокса «Эпизод»', 'Перестановки в администрации проекта',
+                'Библиотеке Лосяша исполнилось 11 лет!', '11 лет вики!', 'Библиотека Лосяша на «Вики Месяца»!',
+                ]
+
+//устанавливаем текущую дату
+var currentDate = dates[dates.length-1];
+currentDate.innerHTML += ' jan';
+currentDate.classList.add("current-date");
+
+//randomchoice
+function choose(choices) {
+    var index = Math.floor(Math.random() * choices.length);
+    return choices[index];
+  }
 
 //дополнительные инструменты редактора
 function displayAdittionalRightTools() {
@@ -110,4 +135,8 @@ function toggleTheme() {
         moon.style.display = "unset";
     }
     isWhiteTheme = !isWhiteTheme;
+}
+//Обновление блока did you know
+function updateDidYouKnow() {
+    didYouKnowP.innerHTML = choose(didYouKnowArr);
 }

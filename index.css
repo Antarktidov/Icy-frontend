@@ -2,8 +2,15 @@
 :root {
   --dark-nav-colour: #101111;
   --light-link-color: rgb(45, 128, 156);
+  --dark-link-color: rgb(28, 166, 212);
   --border-right: #d8d8d8;
   --f5-gray: #f5f5f5;
+}
+body.theme-icy-light {
+  --f5-gray: #f5f5f5;
+}
+body.theme-icy-dark {
+  --f5-gray: #2a2d32;;
 }
 /*Сбрасываем стандартные стили*/
 html {
@@ -214,7 +221,7 @@ html {
     color: var(--light-link-color);
   }
   .theme-icy-dark .interwiki-text{
-    color: rgb(28, 166, 212);
+    color: var(--dark-link-color);
   }
   .lang-link {
     text-decoration: none;
@@ -630,6 +637,7 @@ body.theme-icy-dark {
   font-size: 25px;
   text-align: center;
   backdrop-filter: blur(5px);
+  color: black;
 }
 .news-left-p {
   margin-left: 25px;
@@ -664,6 +672,12 @@ body.theme-icy-dark {
   text-decoration: none;
   margin-top: 10px; 
 }
+.theme-icy-light .right-link {
+  color: var(--light-link-color);
+}
+.theme-icy-dark .right-link {
+  color: var(--dark-link-color);
+}
 .news-p {
   margin-bottom: 20px;
   margin-top: 20px;
@@ -684,8 +698,20 @@ body.theme-icy-dark {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  color: var(--light-link-color);
   text-decoration: none;
+}
+.theme-icy-light .dates-linik {
+  color: var(--light-link-color);
+}
+.theme-icy-dark .dates-linik {
+  color: var(--dark-link-color);
+}
+.current-date {
+  width: 80px;
+}
+.theme-icy-light .current-date {
+  background-color: var(--light-link-color);
+  color: white;
 }
 /*Внизу*/
 .mainpage-left-nav {
@@ -737,10 +763,10 @@ body.theme-icy-dark {
   margin-right: 20px;
 }
 .featured-pucture-nav {
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 .featured-pucture-sub-nav {
-  height: 300px;
+  height: 13vh;
 }
 .featured-pictire-bottom {
   display: flex;
@@ -766,6 +792,7 @@ body.theme-icy-dark {
 }
 .did-you-know-nav {
   margin-right: 20px;
+  height: 20vh;
 }
 /*Правая колонка*/
 .right-colomn {
@@ -792,12 +819,21 @@ body.theme-icy-dark {
   margin-bottom: 10px;
   text-align: center;
 }
+.theme-icy-light .portal-link {
+  color: black;
+}
+.theme-icy-dark .portal-link {
+  color: white;
+}
 .sister-projects-link {
   margin-top: 30px;
   margin-left: 20px;
 }
-.sister-projects {
+.theme-icy-light .sister-projects {
   background-color: #ececec;
+}
+.theme-icy-dark .sister-projects {
+  background-color: var(--dark-nav-colour);
 }
 .right-colomn-bottom {
   background-color: var(--f5-gray);
