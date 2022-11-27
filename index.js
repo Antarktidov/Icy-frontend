@@ -36,7 +36,8 @@ var newTitles = ['Библиотеке Лосяша — 12 лет!', 'Четыр
 
 //устанавливаем текущую дату
 var currentDate = dates[dates.length-1];
-currentDate.innerHTML += ' jan';
+var currentDateAddedHTML = ' jan &lt; &gt;';
+currentDate.innerHTML += currentDateAddedHTML;
 currentDate.classList.add("current-date");
 
 //randomchoice
@@ -139,4 +140,14 @@ function toggleTheme() {
 //Обновление блока did you know
 function updateDidYouKnow() {
     didYouKnowP.innerHTML = choose(didYouKnowArr);
+}
+//переключение дат
+function swithDate(date) {
+    var text = currentDate.innerText;
+    text = text.replace(currentDateAddedHTML, '');
+    console.log(currentDateAddedHTML);
+    console.log(currentDate.innerHTML);
+    currentDate = date;
+    currentDate.innerHTML += currentDateAddedHTML;
+    currentDate.classList.add("current-date");
 }

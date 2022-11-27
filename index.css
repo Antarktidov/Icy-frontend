@@ -709,9 +709,9 @@ body.theme-icy-dark {
 .current-date {
   width: 80px;
 }
-.theme-icy-light .current-date {
+/*.theme-icy-light */.current-date {
   background-color: var(--light-link-color);
-  color: white;
+  color: white !important;
 }
 /*Внизу*/
 .mainpage-left-nav {
