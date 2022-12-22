@@ -916,6 +916,24 @@ body.theme-icy-dark {
   margin-left: 20px;
   margin-right: 20px;
 }
+/*"Левый блок"*/
+@media (max-width: 1100px) {
+  /*.news-left-p {
+    overflow: unset;
+  }*/
+  /*.news-right, 
+  .dates-line,
+  .on-this-day-list{
+    position: relative;
+    top: 100px;
+  }*/
+  .featured-pucture-nav {
+    overflow-y: unset;
+  }
+  .mobile-nav {
+    z-index: 50;
+  }
+}
 /*временно скрываем мобильную галлерею и слайдер*/
 .mobile-gallery,
 .mainpage-slider-m,
