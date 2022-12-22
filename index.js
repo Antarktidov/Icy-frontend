@@ -144,7 +144,7 @@ function updateDidYouKnow() {
 //переключение дат
 function swithDate(date) {
     var text = currentDate.innerText;
-    text = text.replace(currentDateAddedHTML, '');
+    currentDate.innerText = text.replace(currentDateAddedHTML, '');
     console.log(currentDateAddedHTML);
     console.log(currentDate.innerHTML);
     currentDate = date;

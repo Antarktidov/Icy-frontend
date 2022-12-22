@@ -441,8 +441,17 @@ html {
 }
 /*Мобильная верхняя менюшка*/
 @media (max-width: 1100px) {
-  .desktop-nav {
-    display: none;
+  .desktop-nav,
+  .mainpage-slider,
+  .mainpage-main,
+  .right-colomn,
+  .mainpage-slider-top,
+  .mainpage-center,
+  .mainpage-slider-bottom {
+    display: none !important;
+  }
+  .mobile-mainpage {
+    display: unset !important;
   }
   .mobile-nav {
     display: flex;
@@ -556,6 +565,14 @@ body.theme-icy-dark {
   z-index: 0;
   position: fixed;
 }
+.mainpage-slider-m {
+  content: url(https://static.wikia.nocookie.net/smesharikiarhives/images/d/d7/Ддддддддддддддддддддддддддддддддддддддддддддддддд.JPG/revision/latest?cb=20140730173909&format=original&path-prefix=ru);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  position: fixed;
+}
 .mainpage-slider-top {
   position: fixed;
   top: 115px;
@@ -607,7 +624,9 @@ body.theme-icy-dark {
   width: 35vw;
 }
 .apps-icon-button,
-.random-icon-button {
+.random-icon-button,
+.apps-icon-button-m,
+.random-icon-button-m {
   width: 28px;
   height: 28px;
 }
@@ -858,4 +877,25 @@ body.theme-icy-dark {
 .bottom-left-middle-border {
   border-bottom: 1px solid var(--border-right);
   margin-left: -20px;
+}
+/*Мобильная заглавная*/
+.mobile-mainpage {
+  position: absolute;
+  top: 120px;
+  display: none;
+}
+/*Мобильная галлерея*/
+.mobile-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /*flex-direction: row;*/
+}
+.mobile-gallery-img {
+  width: 25vw;
+  height: 30vw;
+  object-fit: cover;
+}
+/*временно скрываем мобильную галлерею*/
+.mobile-gallery {
+  display: none;
 }
